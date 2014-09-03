@@ -6,6 +6,7 @@ build:
 bash:
 	docker run -it --rm \
 		-v ${PWD}/logstash.conf:/etc/opt/logstash.conf \
+		-v ${PWD}/data:/mnt/elasticsearch \
 		-p 5505:5505 \
 		-p 9200:9200 \
 		${image} /bin/bash
@@ -13,6 +14,7 @@ bash:
 run:
 	docker run -it --rm \
 		-v ${PWD}/logstash.conf:/etc/opt/logstash.conf \
+		-v ${PWD}/data:/mnt/elasticsearch \
 		-p 5505:5505 \
 		-p 9200:9200 \
 		${image}

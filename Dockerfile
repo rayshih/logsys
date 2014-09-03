@@ -13,7 +13,9 @@ RUN rm -f /tmp/logstash-1.4.2.tar.gz
 RUN curl -O https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz
 RUN tar zxvf elasticsearch-1.1.1.tar.gz
 RUN mv elasticsearch-1.1.1 /opt/elasticsearch
+ADD ./elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 
+# run script
 ADD ./run.sh /opt/run.sh
 
 WORKDIR /opt
