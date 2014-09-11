@@ -16,5 +16,5 @@ This docker image consists of
 
 ## Note for generate htpasswd
 
-   sudo apt-get install apache2-utils
-   sudo htpasswd -c ./kibana.htpasswd exampleuser
+    sudo apt-get install apache2-utils
+    sudo htpasswd -c ./kibana.htpasswd exampleuser
