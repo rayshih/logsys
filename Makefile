@@ -1,4 +1,8 @@
 image = "rayshih/logsys"
+PWD = $(shell pwd)
+
+test:
+	echo ${PWD}
 
 all: build
 
