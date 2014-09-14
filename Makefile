@@ -14,6 +14,7 @@ bash:
 		--name logsys \
 		-v ${PWD}/logstash.conf:/etc/opt/logstash.conf \
 		-v ${PWD}/data:/mnt/elasticsearch \
+		-v ${PWD}/logs:/mnt/elasticsearch-logs \
 		-v ${PWD}/kibana.htpasswd:/etc/nginx/conf.d/kibana.htpasswd \
 		-p 5505:5505 \
 		-p 80:80 \
@@ -24,6 +25,7 @@ run:
 		--name logsys \
 		-v ${PWD}/logstash.conf:/etc/opt/logstash.conf \
 		-v ${PWD}/data:/mnt/elasticsearch \
+		-v ${PWD}/logs:/mnt/elasticsearch-logs \
 		-v ${PWD}/kibana.htpasswd:/etc/nginx/conf.d/kibana.htpasswd \
 		-p 5505:5505 \
 		-p 80:80 \

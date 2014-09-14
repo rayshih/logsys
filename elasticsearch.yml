@@ -160,7 +160,7 @@ path.data: /mnt/elasticsearch
 
 # Path to log files:
 #
-# path.logs: /path/to/logs
+path.logs: /mnt/elasticsearch-logs
 
 # Path to where plugins are installed:
 #
