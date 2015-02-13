@@ -24,7 +24,7 @@ RUN rm -f /tmp/elasticsearch-1.1.1.tar.gz
 # install kibana
 RUN curl -O https://download.elasticsearch.org/kibana/kibana/kibana-3.0.1.tar.gz
 RUN tar zxvf kibana-3.0.1.tar.gz
-RUN mkdir /var/www && mv kibana-3.0.1 /var/www/kibana
+RUN mkdir -p /var/www && mv kibana-3.0.1 /var/www/kibana
 ADD ./kibana_config.js /var/www/kibana/config.js
 RUN rm -f /tmp/kibana-3.0.1.tar.gz
 ADD ./nginx.conf /etc/nginx/sites-available/default
